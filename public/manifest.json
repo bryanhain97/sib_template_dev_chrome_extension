@@ -2,13 +2,20 @@
   "name": "SIB Template Devtool",
   "description": "An extension that will help with developing sib templates by providing you with the code for wrapper, grids and other stuff",
   "author": "Bryan Hain",
-  "version": 1,
-  "manifest_version": 2,
+  "version": "1.0.0",
+  "manifest_version": 3,
   "action": {
     "default_title": "SIB Template Devtool",
-    "default_popup": {
+    "default_popup": "index.html",
+    "default_icon": {
       "16": "logo192.png",
+      "48": "logo192.png",
       "128": "logo512.png"
     }
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo512.png"
   }
 }
