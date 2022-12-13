@@ -1,0 +1,39 @@
+{
+    "templates": [
+        {
+            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
+            "description": "description1",
+            "clipboardText": "description1"
+        },
+        {
+            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
+            "description": "description2",
+            "clipboardText": "description2"
+        },
+        {
+            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
+            "description": "description3",
+            "clipboardText": "description3"
+        },
+        {
+            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
+            "description": "description4",
+            "clipboardText": "description4"
+        },
+        {
+            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
+            "description": "description5",
+            "clipboardText": "description5"
+        },
+        {
+            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
+            "description": "description6",
+            "clipboardText": "description6"
+        },
+        {
+            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
+            "description": "description7",
+            "clipboardText": "description7"
+        }
+    ]
+}
