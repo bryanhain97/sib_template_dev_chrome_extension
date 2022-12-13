@@ -1,25 +1,14 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+  "name": "SIB Template Devtool",
+  "description": "An extension that will help with developing sib templates by providing you with the code for wrapper, grids and other stuff",
+  "author": "Bryan Hain",
+  "version": 1,
+  "manifest_version": 2,
+  "action": {
+    "default_title": "SIB Template Devtool",
+    "default_popup": {
+      "16": "logo192.png",
+      "128": "logo512.png"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  }
 }
