@@ -1,12 +1,12 @@
 import React from 'react';
 import Template, { ITemplate } from './Template';
 import './Templates.sass';
-import jsonData from '../../data.json';
+import clipboardText from '../../data.json';
 
 const Templates = () => {
     return (
         <div className="templates">
-            {jsonData.templates.map(({ imgSrc, description, clipboardText }: ITemplate, i) => {
+            {clipboardText.templates.map(({ imgSrc, description, clipboardText }: ITemplate, i) => {
                 return (
                     <Template
                         key={i}

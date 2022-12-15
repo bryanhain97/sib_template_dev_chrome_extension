@@ -1,39 +1,377 @@
 {
     "templates": [
         {
-            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
-            "description": "description1",
-            "clipboardText": "description1"
+            "imgSrc": "pic1.png",
+            "description": "Grid-row with 2 columns",
+            "clipboardText": {
+                "type": "grid-row",
+                "align": "top",
+                "thumbnail": "/assets/img/editor/element-style-2.svg",
+                "moduleName": "image-text",
+                "title": "2-col-images",
+                "layout": {
+                    "320px": {
+                        "width": "100%",
+                        "padding-left": "15px",
+                        "padding-right": "15px",
+                        "display": "columns",
+                        "padding-bottom": "0px"
+                    },
+                    "default": {
+                        "align": "center",
+                        "padding-top": "15px",
+                        "padding-bottom": "0px",
+                        "width": "100%",
+                        "padding-left": "30px",
+                        "padding-right": "30px",
+                        "valign": "top"
+                    }
+                },
+                "content": [
+                    {
+                        "type": "grid-column",
+                        "label": "Inhalt hier einfügen",
+                        "isEmpty": false,
+                        "title": "text column",
+                        "read-only": true,
+                        "stylable": true,
+                        "layout": {
+                            "320px": {
+                                "width": "50%"
+                            },
+                            "default": {
+                                "padding-left": "0px",
+                                "padding-right": "0px",
+                                "valign": "top"
+                            }
+                        },
+                        "content": [
+                            {
+                                "type": "grid-row",
+                                "align": "top",
+                                "thumbnail": "/assets/img/editor/element-style-2.svg",
+                                "moduleName": "image-text",
+                                "title": "2-col-images",
+                                "layout": {
+                                    "320px": {
+                                        "width": "100%",
+                                        "padding-left": "15px",
+                                        "padding-right": "15px",
+                                        "display": "columns",
+                                        "padding-bottom": "0px"
+                                    },
+                                    "default": {
+                                        "align": "center",
+                                        "padding-bottom": "0px",
+                                        "width": "100%",
+                                        "valign": "top",
+                                        "padding-left": null,
+                                        "padding-right": null
+                                    }
+                                },
+                                "content": [
+                                    {
+                                        "type": "grid-column",
+                                        "label": "Inhalt hier einfügen",
+                                        "isEmpty": false,
+                                        "title": "text column",
+                                        "read-only": true,
+                                        "stylable": true,
+                                        "layout": {
+                                            "320px": {
+                                                "width": "50%"
+                                            },
+                                            "default": {
+                                                "padding-left": "0px",
+                                                "padding-right": "26px",
+                                                "valign": "top"
+                                            }
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "image",
+                                                "thumbnail": "/assets/img/editor/element_image.svg",
+                                                "title": "Bild",
+                                                "layout": {
+                                                    "320px": {
+                                                        "width": "100%",
+                                                        "max-width": "320px"
+                                                    },
+                                                    "default": {
+                                                        "align": "center",
+                                                        "embed": false,
+                                                        "dynamic": false,
+                                                        "image-maxWidth": "145.531px",
+                                                        "resizeEnable": false,
+                                                        "removePadding": false,
+                                                        "padding-top": "0px",
+                                                        "padding-bottom": "0px",
+                                                        "width": "145.531px",
+                                                        "padding-left": "0px",
+                                                        "padding-right": "0px",
+                                                        "background-position": "center",
+                                                        "background-repeat": "no-repeat",
+                                                        "background-size": "auto",
+                                                        "valign": "top"
+                                                    }
+                                                },
+                                                "content": {
+                                                    "src": "https://img.mailinblue.com/2670624/images/content_library/original/6399a075f885482c5c59f6c3.png"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "grid-column",
+                                        "label": "Inhalt hier einfügen",
+                                        "isEmpty": false,
+                                        "title": "text column",
+                                        "read-only": true,
+                                        "stylable": true,
+                                        "layout": {
+                                            "320px": {
+                                                "width": "50%"
+                                            },
+                                            "default": {
+                                                "padding-left": "0px",
+                                                "padding-right": "0px",
+                                                "valign": "top"
+                                            }
+                                        },
+                                        "content": [
+                                            {
+                                                "type": "image",
+                                                "thumbnail": "/assets/img/editor/element_image.svg",
+                                                "title": "Bild",
+                                                "layout": {
+                                                    "320px": {
+                                                        "width": "100%",
+                                                        "max-width": "320px"
+                                                    },
+                                                    "default": {
+                                                        "align": "center",
+                                                        "embed": false,
+                                                        "dynamic": false,
+                                                        "image-maxWidth": "145.453px",
+                                                        "resizeEnable": false,
+                                                        "removePadding": false,
+                                                        "imgSize": "65590",
+                                                        "padding-top": "0px",
+                                                        "padding-bottom": "0px",
+                                                        "width": "145.453px",
+                                                        "padding-left": "0px",
+                                                        "padding-right": "0px",
+                                                        "background-position": "center",
+                                                        "background-repeat": "no-repeat",
+                                                        "background-size": "auto",
+                                                        "valign": "top"
+                                                    }
+                                                },
+                                                "content": {
+                                                    "src": "https://img.mailinblue.com/2670624/images/content_library/original/6399a076cb3d2b04d07054a4.png"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "dist": "171-145",
+                                "gutter": "0px"
+                            },
+                            {
+                                "type": "image",
+                                "thumbnail": "/assets/img/editor/element_image.svg",
+                                "title": "Bild",
+                                "layout": {
+                                    "320px": {
+                                        "width": "100%",
+                                        "max-width": "320px",
+                                        "padding-top": "14px"
+                                    },
+                                    "default": {
+                                        "align": "center",
+                                        "embed": false,
+                                        "dynamic": false,
+                                        "image-maxWidth": "317px",
+                                        "removePadding": true,
+                                        "resizeEnable": false,
+                                        "padding-top": "24px",
+                                        "padding-bottom": "0px",
+                                        "width": "317px",
+                                        "padding-left": "0px",
+                                        "padding-right": "0px",
+                                        "background-position": "center",
+                                        "background-repeat": "no-repeat",
+                                        "background-size": "auto",
+                                        "valign": "top"
+                                    }
+                                },
+                                "content": {
+                                    "src": "https://img.mailinblue.com/2670624/images/content_library/original/6399a0774acc07176202f077.png"
+                                }
+                            },
+                            {
+                                "type": "text-button",
+                                "thumbnail": "/assets/img/editor/element_button.svg",
+                                "text": "<p>PHOTO GALLERY</p>",
+                                "title": "Button",
+                                "layout": {
+                                    "320px": {
+                                        "width": "100%"
+                                    },
+                                    "default": {
+                                        "align": "center",
+                                        "item-height": "41.796875px",
+                                        "text-align": "center",
+                                        "text-valign": "top",
+                                        "padding-top": "14px",
+                                        "padding-right": "0px",
+                                        "padding-bottom": "14px",
+                                        "padding-left": "0px",
+                                        "margin-top": "25px",
+                                        "margin-bottom": "0px",
+                                        "width": "100%",
+                                        "valign": "top"
+                                    }
+                                },
+                                "content": {
+                                    "text": "<p>PHOTO GALLERY</p>"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "grid-column",
+                        "label": "Inhalt hier einfügen",
+                        "isEmpty": false,
+                        "title": "image column",
+                        "read-only": true,
+                        "stylable": true,
+                        "layout": {
+                            "320px": {
+                                "width": "50%",
+                                "padding-right": "14px"
+                            },
+                            "default": {
+                                "padding-left": "23px",
+                                "padding-right": "0px",
+                                "valign": "top"
+                            }
+                        },
+                        "content": [
+                            {
+                                "type": "image",
+                                "title": "Bild",
+                                "layout": {
+                                    "320px": {
+                                        "width": "100%",
+                                        "max-width": "320px"
+                                    },
+                                    "default": {
+                                        "align": "center",
+                                        "embed": false,
+                                        "dynamic": false,
+                                        "image-maxWidth": "200px",
+                                        "removePadding": false,
+                                        "imgSize": "601403",
+                                        "width": "199px",
+                                        "padding-top": "0px",
+                                        "padding-bottom": "0px",
+                                        "background-position": "center",
+                                        "background-repeat": "no-repeat",
+                                        "background-size": "auto",
+                                        "padding-left": "0px",
+                                        "padding-right": "0px",
+                                        "valign": "top"
+                                    }
+                                },
+                                "content": {
+                                    "src": "https://img.mailinblue.com/2670624/images/content_library/original/6399a0786ac9ac6e416420bd.png"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "dist": "317-223",
+                "gutter": "0px"
+            }
         },
         {
             "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
             "description": "description2",
-            "clipboardText": "description2"
+            "clipboardText": {
+                "name": "bryan",
+                "alter": 23,
+                "geschlecht": "männlich",
+                "spiele": [
+                    "league of legends",
+                    "diablo3"
+                ]
+            }
         },
         {
             "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
             "description": "description3",
-            "clipboardText": "description3"
+            "clipboardText": {
+                "name": "bryan",
+                "alter": 23,
+                "geschlecht": "männlich",
+                "spiele": [
+                    "league of legends",
+                    "diablo3"
+                ]
+            }
         },
         {
             "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
             "description": "description4",
-            "clipboardText": "description4"
+            "clipboardText": {
+                "name": "bryan",
+                "alter": 23,
+                "geschlecht": "männlich",
+                "spiele": [
+                    "league of legends",
+                    "diablo3"
+                ]
+            }
         },
         {
             "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
             "description": "description5",
-            "clipboardText": "description5"
+            "clipboardText": {
+                "name": "bryan",
+                "alter": 23,
+                "geschlecht": "männlich",
+                "spiele": [
+                    "league of legends",
+                    "diablo3"
+                ]
+            }
         },
         {
             "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
             "description": "description6",
-            "clipboardText": "description6"
+            "clipboardText": {
+                "name": "bryan",
+                "alter": 23,
+                "geschlecht": "männlich",
+                "spiele": [
+                    "league of legends",
+                    "diablo3"
+                ]
+            }
         },
         {
             "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
             "description": "description7",
-            "clipboardText": "description7"
+            "clipboardText": {
+                "name": "bryan",
+                "alter": 23,
+                "geschlecht": "männlich",
+                "spiele": [
+                    "league of legends",
+                    "diablo3"
+                ]
+            }
         }
     ]
 }

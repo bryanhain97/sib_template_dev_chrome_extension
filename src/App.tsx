@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Headline
         title="Code-templates"
-        description="A chrome devtool developed to comfort SIB template developers with prefabricated code-templates"
+        description="A chrome devtool designed to comfort SIB template developers with prefabricated code-templates."
       />
       <Templates />
     </div>

@@ -7,16 +7,35 @@
     overflow-y: scroll
     .template
         display: flex
-        height: 125px
+        height: 200px
+        padding: 3px
+        box-sizing: border-box
         width: 100%
-        cursor: pointer
         transition: background-color 0.25s ease
         &:hover
             background-color: #e0e0e0
         &:not(&:first-of-type)
             margin-top: 1rem
         .image
-            width: 250px
-            height: inherit
-        .description
-            width: 100%
+            width: 320px
+        .options
+            margin: 0 auto
+            display: flex
+            padding: 0 6px
+            flex-direction: column
+            h4.description
+                margin: 0 0 20px
+                text-decoration: 1px underline solid black
+                font-size: 16px
+                color: #000000
+                width: 100%
+                text-align: center
+            .field
+                display: flex
+                margin-bottom: 6px
+                .label
+                    width: 40px
+            .btn
+                margin-top: auto
+                padding: 3px 6px
+                cursor: pointer
