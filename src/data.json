@@ -2,7 +2,7 @@
     "templates": [
         {
             "imgSrc": "pic1.png",
-            "description": "Grid-row with 2 columns",
+            "description": "Grid-row with N columns",
             "clipboardText": {
                 "type": "grid-row",
                 "align": "top",

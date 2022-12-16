@@ -2,12 +2,12 @@
     position: relative
     display: flex
     flex-direction: column
-    height: 250px
+    height: 210px
     width: 100%
     overflow-y: scroll
     .template
         display: flex
-        height: 200px
+        min-height: 180px
         padding: 3px
         box-sizing: border-box
         width: 100%
@@ -17,14 +17,17 @@
         &:not(&:first-of-type)
             margin-top: 1rem
         .image
-            width: 320px
+            width: 300px
+            height: 100%
+            align-self: center
+            object-fit: auto
         .options
             margin: 0 auto
             display: flex
             padding: 0 6px
             flex-direction: column
             h4.description
-                margin: 0 0 20px
+                margin: 0 0 10px
                 text-decoration: 1px underline solid black
                 font-size: 16px
                 color: #000000
@@ -32,10 +35,34 @@
                 text-align: center
             .field
                 display: flex
-                margin-bottom: 6px
+                &:not(&:first-of-type)
+                    margin-top: 6px
                 .label
-                    width: 40px
-            .btn
+                    width: 80px
+            .padding-fields
+                display: flex
+                flex-wrap: wrap
+                margin: 0 auto
+                .padding-field
+                    max-width: 50px
+                    margin: 10px 0
+                .padding-field label
+                    font-size: 12px
+                .padding-field input
+                    width: 25px
+            .buttons
                 margin-top: auto
-                padding: 3px 6px
-                cursor: pointer
+                .btn
+                    border: 1px solid black
+                    border-radius: 2px
+                    padding: 6px 6px
+                    margin-right: 3px
+                    cursor: pointer
+                    transition: opacity 0.3s ease
+                .btn-copy
+                    
+                    background-color: #38bb38
+                    &.disabled
+                        cursor: default
+                        pointer-events: none
+                        opacity: 0.28
