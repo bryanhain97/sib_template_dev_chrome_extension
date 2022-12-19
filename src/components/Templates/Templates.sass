@@ -1,3 +1,5 @@
+$labelWidth: 80px
+
 .templates
     position: relative
     display: flex
@@ -7,6 +9,8 @@
     overflow-y: scroll
     .template
         display: flex
+        height: min-content
+        max-height: 300px
         min-height: 180px
         padding: 3px
         box-sizing: border-box
@@ -22,9 +26,9 @@
             align-self: center
             object-fit: auto
         .options
-            margin: 0 auto
             display: flex
-            padding: 0 6px
+            width: 100%
+            padding: 0 1rem
             flex-direction: column
             h4.description
                 margin: 0 0 10px
@@ -38,29 +42,32 @@
                 &:not(&:first-of-type)
                     margin-top: 6px
                 .label
-                    width: 80px
+                    width: $labelWidth
             .padding-fields
                 display: flex
-                flex-wrap: wrap
-                margin: 0 auto
+                width: 100%
+                justify-content: flex-start
+                column-gap: 15px
                 .padding-field
-                    max-width: 50px
-                    margin: 10px 0
+                    display: flex
+                    width: min-content
+                    .left
+                        margin-right: 2px
                 .padding-field label
                     font-size: 12px
                 .padding-field input
                     width: 25px
             .buttons
                 margin-top: auto
+                margin-left: auto
                 .btn
                     border: 1px solid black
                     border-radius: 2px
+                    margin-left: 6px
                     padding: 6px 6px
-                    margin-right: 3px
                     cursor: pointer
                     transition: opacity 0.3s ease
                 .btn-copy
-                    
                     background-color: #38bb38
                     &.disabled
                         cursor: default
