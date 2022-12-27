@@ -3,102 +3,293 @@
         {
             "imgSrc": "pic1.png",
             "description": "Grid-row with N columns",
-            "clipboardText": [
-                {
-                    "type": "grid-row",
-                    "align": "top",
-                    "moduleName": "columns-3-9",
-                    "thumbnail": "/assets/img/editor/element-style-3.svg",
-                    "title": "Stil 3",
-                    "stylable": false,
-                    "layout": {
-                        "320px": {
-                            "width": "100%",
-                            "display": "rows",
-                            "padding-left": "15px",
-                            "padding-right": "15px"
-                        },
-                        "default": {
-                            "align": "center",
-                            "background-position": "center",
-                            "background-repeat": "no-repeat",
-                            "background-size": "cover",
-                            "padding-top": "20px",
-                            "padding-bottom": "20px",
-                            "width": "100%",
-                            "valign": "top",
-                            "padding-left": null,
-                            "padding-right": null
-                        }
+            "clipboardText": {
+                "type": "grid-row",
+                "align": "top",
+                "moduleName": "columns-3-9",
+                "thumbnail": "/assets/img/editor/element-style-3.svg",
+                "title": "Stil 3",
+                "stylable": false,
+                "layout": {
+                    "320px": {
+                        "width": "100%",
+                        "display": "rows",
+                        "padding-left": "15px",
+                        "padding-right": "15px"
                     },
-                    "content": [
-                        {
-                            "type": "grid-column",
-                            "label": "Inhalt hier einfügen",
-                            "isEmpty": true,
-                            "title": "grid-column",
-                            "read-only": true,
-                            "stylable": true,
-                            "layout": {
-                                "320px": {},
-                                "default": {
-                                    "padding-left": "0px",
-                                    "padding-right": "0px",
-                                    "valign": "top"
-                                }
-                            },
-                            "content": []
+                    "default": {
+                        "align": "center",
+                        "background-position": "center",
+                        "background-repeat": "no-repeat",
+                        "background-size": "cover",
+                        "padding-top": "20px",
+                        "padding-bottom": "20px",
+                        "width": "100%",
+                        "valign": "top",
+                        "padding-left": null,
+                        "padding-right": null
+                    }
+                },
+                "content": [
+                    {
+                        "type": "grid-column",
+                        "label": "Inhalt hier einfügen",
+                        "isEmpty": true,
+                        "title": "grid-column",
+                        "read-only": true,
+                        "stylable": true,
+                        "layout": {
+                            "320px": {},
+                            "default": {
+                                "padding-left": "0px",
+                                "padding-right": "0px",
+                                "valign": "top"
+                            }
                         },
-                        {
-                            "type": "grid-column",
-                            "label": "Inhalt hier einfügen",
-                            "isEmpty": true,
-                            "title": "grid-column",
-                            "read-only": true,
-                            "stylable": true,
-                            "layout": {
-                                "320px": {},
-                                "default": {
-                                    "padding-left": "0px",
-                                    "padding-right": "0px",
-                                    "valign": "top"
-                                }
-                            },
-                            "content": []
+                        "content": []
+                    },
+                    {
+                        "type": "grid-column",
+                        "label": "Inhalt hier einfügen",
+                        "isEmpty": true,
+                        "title": "grid-column",
+                        "read-only": true,
+                        "stylable": true,
+                        "layout": {
+                            "320px": {},
+                            "default": {
+                                "padding-left": "0px",
+                                "padding-right": "0px",
+                                "valign": "top"
+                            }
                         },
-                        {
-                            "type": "grid-column",
-                            "label": "Inhalt hier einfügen",
-                            "isEmpty": true,
-                            "title": "grid-column",
-                            "read-only": true,
-                            "stylable": true,
-                            "layout": {
-                                "320px": {},
-                                "default": {
-                                    "padding-left": "0px",
-                                    "padding-right": "0px",
-                                    "valign": "top"
-                                }
-                            },
-                            "content": []
-                        }
-                    ],
-                    "dist": "4-4-4",
-                    "gutter": "0px"
-                }
-            ]
+                        "content": []
+                    },
+                    {
+                        "type": "grid-column",
+                        "label": "Inhalt hier einfügen",
+                        "isEmpty": true,
+                        "title": "grid-column",
+                        "read-only": true,
+                        "stylable": true,
+                        "layout": {
+                            "320px": {},
+                            "default": {
+                                "padding-left": "0px",
+                                "padding-right": "0px",
+                                "valign": "top"
+                            }
+                        },
+                        "content": []
+                    }
+                ],
+                "dist": "1-1-1",
+                "gutter": "0px"
+            }
         },
         {
-            "imgSrc": "https://de.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/common/logo-color.svg",
-            "description": "description2",
+            "imgSrc": "table.png",
+            "description": "Table rows",
             "clipboardText": {
-                "name": "bryan",
-                "alter": 23,
-                "geschlecht": "männlich",
-                "spiele": [
-                    "league of legends",
-                    "diablo3"
+                "type": "rows",
+                "align": "top",
+                "moduleName": "columns-3-9",
+                "thumbnail": "/assets/img/editor/element-style-3.svg",
+                "title": "table-row",
+                "layout": {
+                    "320px": {
+                        "width": "100%",
+                        "padding-left": "15px",
+                        "padding-right": "15px"
+                    },
+                    "default": {
+                        "align": "center",
+                        "removePadding": false,
+                        "removeMargin": true,
+                        "padding-top": "0px",
+                        "padding-bottom": "0px",
+                        "width": "100%",
+                        "padding-right": "20px",
+                        "padding-left": "20px",
+                        "valign": "middle"
+                    }
+                },
+                "content": [
+                    {
+                        "type": "grid-row",
+                        "align": "top",
+                        "moduleName": "columns-3-9",
+                        "thumbnail": "/assets/img/editor/element-style-3.svg",
+                        "title": "table-row",
+                        "layout": {
+                            "320px": {
+                                "width": "100%",
+                                "display": "rows",
+                                "padding-left": "15px",
+                                "padding-right": "15px"
+                            },
+                            "default": {
+                                "align": "center",
+                                "removePadding": false,
+                                "removeMargin": true,
+                                "padding-top": "0px",
+                                "padding-bottom": "0px",
+                                "width": "100%",
+                                "border-bottom-color": "#707070",
+                                "border-bottom-width": "1px",
+                                "border-left-color": "#707070",
+                                "border-left-width": "1px",
+                                "border-right-color": "#707070",
+                                "border-right-width": "1px",
+                                "padding-right": "0px",
+                                "padding-left": "0px",
+                                "valign": "middle"
+                            }
+                        },
+                        "content": [
+                            {
+                                "type": "grid-column",
+                                "label": "Inhalt hier einfügen",
+                                "isEmpty": false,
+                                "title": "grid-column",
+                                "read-only": true,
+                                "stylable": true,
+                                "layout": {
+                                    "320px": {},
+                                    "default": {
+                                        "padding-left": "0px",
+                                        "padding-right": "0px",
+                                        "height": "50px",
+                                        "border-right-color": "#707070",
+                                        "border-right-width": "1px",
+                                        "valign": "middle"
+                                    }
+                                },
+                                "content": [
+                                    {
+                                        "type": "text",
+                                        "thumbnail": "/assets/img/editor/element_text.svg",
+                                        "title": "Text",
+                                        "stylable": false,
+                                        "layout": {
+                                            "320px": {
+                                                "width": "100%"
+                                            },
+                                            "default": {
+                                                "align": "left",
+                                                "removePadding": true,
+                                                "text-align": "center",
+                                                "text-valign": "top",
+                                                "width": "100%",
+                                                "margin-top": "0px",
+                                                "margin-bottom": "0px",
+                                                "padding-top": "16.5px",
+                                                "padding-bottom": "16px",
+                                                "padding-left": "0px",
+                                                "padding-right": "0px",
+                                                "valign": "top"
+                                            }
+                                        },
+                                        "content": "<div class=\"sib_class_arial_16_oceanblue_regular_up\">LOREM IPSUM</div>"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "grid-column",
+                                "label": "Inhalt hier einfügen",
+                                "isEmpty": false,
+                                "title": "grid-column",
+                                "read-only": true,
+                                "stylable": true,
+                                "layout": {
+                                    "320px": {},
+                                    "default": {
+                                        "padding-left": "0px",
+                                        "padding-right": "0px",
+                                        "border-right-color": "#707070",
+                                        "border-right-width": "1px",
+                                        "height": "50px",
+                                        "valign": "middle"
+                                    }
+                                },
+                                "content": [
+                                    {
+                                        "type": "text",
+                                        "thumbnail": "/assets/img/editor/element_text.svg",
+                                        "title": "Text",
+                                        "stylable": false,
+                                        "layout": {
+                                            "320px": {
+                                                "width": "100%"
+                                            },
+                                            "default": {
+                                                "align": "left",
+                                                "removePadding": true,
+                                                "text-align": "center",
+                                                "text-valign": "top",
+                                                "width": "100%",
+                                                "margin-top": "0px",
+                                                "margin-bottom": "0px",
+                                                "padding-top": "16px",
+                                                "padding-bottom": "17px",
+                                                "line-height": "20px",
+                                                "padding-left": "0px",
+                                                "padding-right": "0px",
+                                                "valign": "top"
+                                            }
+                                        },
+                                        "content": "<div class=\"sib_class_arial_14_black\">Lorem ipsum dolor sit amet</div>"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "grid-column",
+                                "label": "Inhalt hier einfügen",
+                                "isEmpty": false,
+                                "title": "grid-column",
+                                "read-only": true,
+                                "stylable": true,
+                                "layout": {
+                                    "320px": {},
+                                    "default": {
+                                        "padding-left": "0px",
+                                        "padding-right": "0px",
+                                        "valign": "middle"
+                                    }
+                                },
+                                "content": [
+                                    {
+                                        "type": "text",
+                                        "thumbnail": "/assets/img/editor/element_text.svg",
+                                        "title": "Text",
+                                        "stylable": false,
+                                        "layout": {
+                                            "320px": {
+                                                "width": "100%"
+                                            },
+                                            "default": {
+                                                "align": "left",
+                                                "removePadding": true,
+                                                "text-align": "center",
+                                                "text-valign": "top",
+                                                "width": "100%",
+                                                "margin-top": "0px",
+                                                "margin-bottom": "0px",
+                                                "padding-top": "16px",
+                                                "padding-bottom": "17px",
+                                                "line-height": "20px",
+                                                "padding-left": "0px",
+                                                "valign": "top"
+                                            }
+                                        },
+                                        "content": "<div class=\"sib_class_arial_14_black\">Sed ut</div>"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dist": "189-257-114",
+                        "gutter": "0px"
+                    }
                 ]
             }
         },

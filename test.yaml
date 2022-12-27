@@ -1,7 +1,0 @@
-on:
-  push:
-    branches:
-      - master
-jobs:
-  build:
-    runs-on: ubunu-latest

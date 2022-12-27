@@ -1,24 +1,19 @@
-import React from 'react';
-import Template, { ITemplate } from './Template';
-import './Templates.sass';
-import clipboardText from '../../data.json';
+import React from 'react'
+import GridNColumns from './GridNColumns'
+import './Templates.sass'
+import dataJSON from '../../data.json'
 
+const { templates } = dataJSON
 const Templates = () => {
-    // create template context and have createYAML fn here
     return (
         <div className="templates">
-            {clipboardText.templates.map(({ imgSrc, description, clipboardText }: ITemplate, i) => {
-                return (
-                    <Template
-                        key={i}
-                        imgSrc={imgSrc}
-                        description={description}
-                        clipboardText={clipboardText}
-                    />
-                )
-            })}
+            <GridNColumns
+                imgSrc={templates[0].imgSrc}
+                description={templates[0].description}
+                clipboardText={templates[0].clipboardText}
+            />
         </div>
     )
 }
 
-export default Templates;
+export default Templates

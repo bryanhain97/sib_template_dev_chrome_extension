@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import './Headline.sass'
 
 const Headline = ({
     title,
     description
 }: {
-    title: string,
+    title: string
     description: string
 }) => {
     return (
@@ -16,4 +16,4 @@ const Headline = ({
     )
 }
 
-export default Headline;
+export default Headline
