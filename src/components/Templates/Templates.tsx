@@ -1,17 +1,19 @@
-import React from 'react'
-import GridNColumns from './GridNColumns'
-import './Templates.sass'
+import React, { createContext } from 'react'
 import dataJSON from '../../data.json'
+import './_Templates.sass'
+import GridNColumns from '../GridNColumns/GridNColumns'
 
 const { templates } = dataJSON
-const Templates = () => {
+export const TemplatesContext = createContext(templates)
+
+const Templates = (): JSX.Element => {
     return (
         <div className="templates">
-            <GridNColumns
-                imgSrc={templates[0].imgSrc}
-                description={templates[0].description}
-                clipboardText={templates[0].clipboardText}
-            />
+            <TemplatesContext.Provider value={templates}>
+                <GridNColumns />
+                {/* <GridNColumns /> */}
+                {/* <GridNColumns /> */}
+            </TemplatesContext.Provider>
         </div>
     )
 }

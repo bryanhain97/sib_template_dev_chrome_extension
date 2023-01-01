@@ -1,0 +1,41 @@
+@import '../../_variables'
+@import '../_mixins'
+
+.label
+    width: 50px
+.input
+    max-width: 100px
+    border: 1px solid black
+.field
+    margin-bottom: 3px
+.gridNColumns
+    @include template
+    .image-container,
+    .info-container
+        width: $containerWidth
+    .image-container
+        .image
+            @include image
+    .info-container,
+    .input-container
+        display: flex
+        flex-direction: column
+        height: 100%
+        .input-container
+            .field
+                display: flex
+            .paddings
+                display: flex
+                justify-content: space-around
+                flex-wrap: wrap
+                .padding-container
+                    margin-right: 3px
+                .field
+                    max-width: 75px
+                    margin-right: 3px
+                    .label
+                        font-size: 12px
+                        width: fit-content
+                        margin-right: 3px
+                    .input
+                        max-width: 25px

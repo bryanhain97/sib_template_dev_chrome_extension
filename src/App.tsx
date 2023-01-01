@@ -1,14 +1,14 @@
 import React from 'react'
 import Headline from './components/Headline'
 import Templates from './components/Templates/Templates'
-import './App.sass'
+import './index.sass'
 
 function App() {
   return (
     <div className="App">
       <Headline
         title="Code snippets"
-        description="A chrome devtool designed to comfort SIB template developers with prefabricated code-templates."
+        description="A devtool designed to comfort SIB template developers with prefabricated code-templates."
       />
       <Templates />
     </div>

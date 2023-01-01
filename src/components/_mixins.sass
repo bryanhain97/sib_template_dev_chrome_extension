@@ -1,0 +1,19 @@
+$templateBg: #eeeeee88
+$templateBgOnHover: #eeeeee
+
+@mixin template
+    display: flex
+    justify-content: space-between
+    height: 150px
+    overflow: hidden
+    padding: 6px
+    margin-bottom: 6px
+    box-shadow: 2px 2px 2px #bcbcbc
+    transition: all 0.25s ease
+    background-color: $templateBg
+    &:hover
+        background-color: $templateBgOnHover
+@mixin image
+    width: 100%
+    height: 100%
+    object-fit: contain
