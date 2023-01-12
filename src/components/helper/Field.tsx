@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react'
-import { Input } from './GridNColumns'
+import { Input } from '../GridNColumns/GridNColumns'
 
 interface IInputField {
     state: Input
