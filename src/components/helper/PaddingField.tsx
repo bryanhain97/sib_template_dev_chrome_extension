@@ -9,7 +9,7 @@ const PaddingField: React.FC<IPaddingField> = ({ handlePaddings, index }) => {
     return (
         <div className="padding-field">
             <div className="padding-field-left">
-                <label htmlFor={`padding-field-left padding-field-left-${index}`}>{`pL-${index}`}</label>
+                <label className="label" htmlFor={`padding-field-left padding-field-left-${index}`}>{`pL-${index + 1}`}</label>
                 <input
                     type="text"
                     onChange={(e) => handlePaddings(e, index, 'left')}
@@ -18,7 +18,7 @@ const PaddingField: React.FC<IPaddingField> = ({ handlePaddings, index }) => {
                 />
             </div>
             <div className="padding-field-right">
-                <label htmlFor={`padding-field-left padding-field-left-${index}`}>{`pR-${index}`}</label>
+                <label className="label" htmlFor={`padding-field-left padding-field-left-${index}`}>{`pR-${index + 1}`}</label>
                 <input
                     type="text"
                     onChange={(e) => handlePaddings(e, index, 'right')}

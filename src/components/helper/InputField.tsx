@@ -5,13 +5,13 @@ interface IInputField {
     state: Input
     text: string
     id: string
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void
+    handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
-const InputField: React.FC<IInputField> = ({ text, id, handleChange }) => {
+const InputField: React.FC<IInputField> = ({ text, id, handleInputChange }) => {
     return (
         <div className="field">
             <label className="label" htmlFor={id}>{text}</label>
-            <input type="text" className="input" id={id} onChange={handleChange} />
+            <input type="text" className="input" id={id} onChange={handleInputChange} />
         </div>
     )
 }
