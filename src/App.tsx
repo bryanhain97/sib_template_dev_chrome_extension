@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Headline
-        title="Code snippets"
+        title="code snippets"
         description="A devtool designed to comfort SIB template developers with prefabricated code-templates."
       />
       <Templates />

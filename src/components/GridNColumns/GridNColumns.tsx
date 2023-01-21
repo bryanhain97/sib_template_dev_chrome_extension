@@ -4,13 +4,14 @@ import React, {
     useRef,
     useState,
     ChangeEvent,
-    useEffect
+    useEffect,
+    MouseEvent
 } from 'react'
 import { TemplatesContext } from '../Templates/Templates'
 import InputField from '../helper/InputField'
 import PaddingField from '../helper/PaddingField'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-// import YAML from 'yaml'
+import YAML from 'yaml'
 
 interface Padding {
     pL: string
@@ -22,79 +23,104 @@ export interface Input {
     paddings: Padding[]
 }
 
-const initialPaddings: Padding[] = [{ pL: '0', pR: '0' }]
-
+const INITIAL_STATE: {
+    INPUT: Input
+    COLUMNS: number
+    APPLIED: boolean
+    COPIED: boolean
+} = {
+    INPUT: { title: '', dist: '', paddings: [{ pL: '', pR: '' }] },
+    COLUMNS: 1,
+    APPLIED: false,
+    COPIED: false
+}
 const GridNColumns = () => {
-    const templates = useContext(TemplatesContext)
+    const templates = useContext(TemplatesContext) as any
+    const _thisTemplate = templates[0]
     const objectRef = useRef('')
-    const [columns, setColumns] = useState(1)
-    const [input, setInput] = useState<Input>({ title: '', dist: '', paddings: initialPaddings })
-    const [copied, setCopied] = useState<boolean>(false)
+
+    const [columns, setColumns] = useState<number>(INITIAL_STATE.COLUMNS)
+    const [input, setInput] = useState<Input>(INITIAL_STATE.INPUT)
+    const [copied, setCopied] = useState<boolean>(INITIAL_STATE.COPIED)
+    const [applied, setApplied] = useState<boolean>(INITIAL_STATE.APPLIED)
 
     useEffect(() => {
+        setApplied(false)
+        setCopied(false)
+        objectRef.current = ''
         const newColumns = Array.from(input.dist).filter((char) => char === '-').length + 1
         if (newColumns === columns) {
             return
         }
         if (newColumns > columns) {
-            setInput({ ...input, paddings: [...input.paddings, { pL: '0', pR: '0' }] })
+            setInput({ ...input, paddings: [...input.paddings, { pL: '', pR: '' }] })
         }
         if (newColumns < columns) {
             setInput({ ...input, paddings: input.paddings.filter((_, i) => i < newColumns) })
         }
         setColumns(newColumns)
-        // batch
-    }, [input.dist])
+    }, [input])
 
     return (
         <div className="template gridNColumns">
-            <span className={`info-message ${copied ? 'copied' : 'not-copied'}`}>
-                {copied ? 'copied' : 'not copied'}
-            </span>
+            <div className="msg-container">
+                <span className={`info-message ${applied ? 'applied' : 'not-applied'}`}>
+                    applied
+                </span>
+                <span className={`info-message ${copied ? 'copied' : 'not-copied'}`}>
+                    copied
+                </span>
+            </div>
             <div className="container image-container">
-                <img className="image" src={templates[0].imgSrc} alt="no alt" />
+                <img className="image" src={_thisTemplate.imgSrc} alt="no alt" />
             </div>
             <div className="container info-container">
-                <h3>{templates[0].description}</h3>
+                <h3>{_thisTemplate.description}</h3>
                 <div className="container input-container">
                     <div className="input-fields">
-                        <InputField state={input} handleInputChange={handleInputChange}
+                        <InputField state={input.title} handleInputChange={handleInputChange}
                             id='title'
                             text='title'
                         />
-                        <InputField state={input} handleInputChange={handleInputChange}
+                        <InputField state={input.dist} handleInputChange={handleInputChange}
                             id='dist'
                             text='dist'
                         />
                     </div>
                     <div className="padding-fields">
                         {new Array(columns).fill(0).map((_, idx) => {
-                            return (<PaddingField key={idx} index={idx} handlePaddings={handlePaddings} />)
+                            return (<PaddingField key={idx} index={idx} handlePaddings={handlePaddings} state={input} />)
                         })}
                     </div>
                 </div>
                 <div className="buttons">
-                    <button className="btn-apply">apply</button>
+                    <button className="btn-reset" onClick={resetInput}>Reset</button>
+                    <button className="btn-apply" onClick={applyChanges}>Apply</button>
                     <CopyToClipboard text={objectRef.current} onCopy={() => setCopied(true)}>
-                        <button className="btn-copy" onClick={() => setCopied(true)}>Copy to Clipboard</button>
+                        <button className={`btn-copy ${applied ? 'enabled' : 'disabled'}`}>Copy</button>
                     </CopyToClipboard>
                 </div>
             </div>
-        </div>
+        </div >
     )
 
+    function resetInput(e: MouseEvent<HTMLButtonElement>) {
+        setApplied(INITIAL_STATE.APPLIED)
+        setCopied(INITIAL_STATE.COPIED)
+        setColumns(INITIAL_STATE.COLUMNS)
+        setInput(INITIAL_STATE.INPUT)
+    }
     function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
         setInput({ ...input, [e.target.id]: e.target.value })
     }
     function handlePaddings(e: ChangeEvent<HTMLInputElement>, idx: number, side: 'left' | 'right') {
         const nextPadding = { ...input.paddings[idx] }
         if (side === 'left') {
-            nextPadding.pL = e.target.value || '0'
+            nextPadding.pL = e.target.value
         }
         if (side === 'right') {
-            nextPadding.pR = e.target.value || '0'
+            nextPadding.pR = e.target.value
         }
-
         const newPaddings = [...input.paddings].map((padding: Padding, index: number) => {
             if (idx === index) {
                 return nextPadding
@@ -104,11 +130,19 @@ const GridNColumns = () => {
         })
         setInput({ ...input, paddings: newPaddings })
     }
-    // function copyToClipboard(e: MouseEvent<HTMLButtonElement>) {
-    //     // 1. compute the object
-    //     // 2. object.current = YAML stringify(computedObject)
-    //     // 3. buttonRef.current.click() ?
-    // }
+    function applyChanges(e: MouseEvent<HTMLButtonElement>) {
+        const { clipboardText } = _thisTemplate
+        const _clipboardText = { ...clipboardText } // create copy
+        _clipboardText.title = input.title || `Stil-${columns}`
+        _clipboardText.dist = input.dist
+        for (let i = 0; i < columns; i++) {
+            _clipboardText.content[i].layout!.default['padding-left'] = input.paddings[i].pL || '0px'
+            _clipboardText.content[i].layout!.default['padding-right'] = input.paddings[i].pR || '0px'
+        }
+        _clipboardText.content = _clipboardText.content!.filter((_: unknown, idx: number) => idx < columns)
+        objectRef.current = YAML.stringify(_clipboardText)
+        setApplied(true)
+    }
 }
 
 export default GridNColumns

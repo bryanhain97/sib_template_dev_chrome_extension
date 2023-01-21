@@ -1,6 +1,6 @@
+import './_Templates.sass'
 import React, { createContext } from 'react'
 import dataJSON from '../../data.json'
-import './_Templates.sass'
 import GridNColumns from '../GridNColumns/GridNColumns'
 
 const { templates } = dataJSON
@@ -11,8 +11,9 @@ const Templates = (): JSX.Element => {
         <div className="templates">
             <TemplatesContext.Provider value={templates}>
                 <GridNColumns />
-                {/* <GridNColumns /> */}
-                {/* <GridNColumns /> */}
+                <GridNColumns />
+                <GridNColumns />
+                <GridNColumns />
             </TemplatesContext.Provider>
         </div>
     )

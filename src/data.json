@@ -26,8 +26,8 @@
                         "padding-bottom": "20px",
                         "width": "100%",
                         "valign": "top",
-                        "padding-left": null,
-                        "padding-right": null
+                        "padding-left": "20px",
+                        "padding-right": "20px"
                     }
                 },
                 "content": [
