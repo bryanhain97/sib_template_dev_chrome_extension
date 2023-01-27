@@ -1,13 +1,11 @@
 import './_GridNColumns.sass'
 import React, {
-    useContext,
     useRef,
     useState,
     ChangeEvent,
     useEffect,
     MouseEvent
 } from 'react'
-import { TemplatesContext } from '../Templates/Templates'
 import InputField from '../helper/InputField'
 import PaddingField from '../helper/PaddingField'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -34,9 +32,10 @@ const INITIAL_STATE: {
     APPLIED: false,
     COPIED: false
 }
-const GridNColumns = () => {
-    const templates = useContext(TemplatesContext) as any
-    const _thisTemplate = templates[0]
+const distRegex = /^$|\d{1,2,3}(-\d{1,2,3})?(-\d{1,2,3})?/mg
+
+const GridNColumns = ({ template }: any) => {
+    const _thisTemplate = template
     const objectRef = useRef('')
 
     const [columns, setColumns] = useState<number>(INITIAL_STATE.COLUMNS)
@@ -85,6 +84,7 @@ const GridNColumns = () => {
                         <InputField state={input.dist} handleInputChange={handleInputChange}
                             id='dist'
                             text='dist'
+                            invalid={!distRegex.test(input.dist)}
                         />
                     </div>
                     <div className="padding-fields">
@@ -132,9 +132,9 @@ const GridNColumns = () => {
     }
     function applyChanges(e: MouseEvent<HTMLButtonElement>) {
         const { clipboardText } = _thisTemplate
-        const _clipboardText = { ...clipboardText } // create copy
+        const _clipboardText = { ...clipboardText }
         _clipboardText.title = input.title || `Stil-${columns}`
-        _clipboardText.dist = input.dist
+        _clipboardText.dist = input.dist || '12'
         for (let i = 0; i < columns; i++) {
             _clipboardText.content[i].layout!.default['padding-left'] = input.paddings[i].pL || '0px'
             _clipboardText.content[i].layout!.default['padding-right'] = input.paddings[i].pR || '0px'

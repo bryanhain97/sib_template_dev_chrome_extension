@@ -9,12 +9,7 @@ export const TemplatesContext = createContext(templates)
 const Templates = (): JSX.Element => {
     return (
         <div className="templates">
-            <TemplatesContext.Provider value={templates}>
-                <GridNColumns />
-                <GridNColumns />
-                <GridNColumns />
-                <GridNColumns />
-            </TemplatesContext.Provider>
+            <GridNColumns template={templates[0]} />
         </div>
     )
 }

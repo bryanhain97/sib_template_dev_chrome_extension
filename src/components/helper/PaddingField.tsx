@@ -29,6 +29,7 @@ const PaddingField: React.FC<IPaddingField> = ({ handlePaddings, index, state })
                     required
                 />
             </div>
+            {/* <input type="checkbox" /> // add checkbox to add wrapper element */}
         </div >
     )
 }
