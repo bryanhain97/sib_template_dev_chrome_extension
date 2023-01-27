@@ -32,7 +32,6 @@ const INITIAL_STATE: {
     APPLIED: false,
     COPIED: false
 }
-const distRegex = /^$|\d{1,2,3}(-\d{1,2,3})?(-\d{1,2,3})?/mg
 
 const GridNColumns = ({ template }: any) => {
     const _thisTemplate = template
@@ -84,7 +83,6 @@ const GridNColumns = ({ template }: any) => {
                         <InputField state={input.dist} handleInputChange={handleInputChange}
                             id='dist'
                             text='dist'
-                            invalid={!distRegex.test(input.dist)}
                         />
                     </div>
                     <div className="padding-fields">
